@@ -1,121 +1,99 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8e9f0;
-  color: #333;
+*{
+    color: black;
+    font-family: sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  z-index: 1000;
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.4rem;
+body{
+    background-image: url(https://img.freepik.com/premium-photo/screenshot-landscape-with-mountains-clouds_1086760-139844.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 250px;
+    text-align: center;
+    padding-top: 20vh;
+    padding-bottom: 335px;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.5rem;
+.turn-container{
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
 }
 
-.navbar a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
+.turn-container h3{
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
-.navbar a:hover {
-  color: #d63384;
+.turn-container .turn-box{
+    border: 3px solid #000;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
-section {
-  padding: 6rem 2rem;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-sizing: border-box;
+.turn-container .turn-box:nth-child(even){
+    border-right: none;
 }
 
-.hero {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 8rem;
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color:  #f03017e7;
+    z-index: -1;
 }
 
-.hero-content {
-  max-width: 500px;
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 250px;
+    width: 250px;
+    margin: 30px auto;
+    border: 3px solid #000000e1;
 }
 
-.hero-content h2 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
+.box{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #000;
 }
 
-.hero-content h2:hover {
-  color: #d63384;
+.box:hover{
+    background-color: #f03017e7;
 }
 
-.subheading {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1rem;
+#play-again{
+    background-color: #f03017e7;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
 }
 
-.description {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 1.5rem;
-}
-
-.buttons button {
-  padding: 10px 20px;
-  margin-right: 10px;
-  border: 2px solid #d63384;
-  background-color: transparent;
-  color: #d63384;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.buttons button:hover {
-  background-color: #d63384;
-  color: #fff;
-  transform: scale(1.05);
-}
-
-.buttons button:active {
-  transform: scale(0.95);
-  background-color: #c92c6d;
-}
-
-.section-content {
-  max-width: 600px;
-  text-align: center;
-}
-
-.section-content h2 {
-  transition: color 0.3s ease;
-}
-
-.section-content h2:hover {
-  color: #d63384;
+#play-again:hover{
+    padding: 10px 40px;
+    background-color: #d41b6e;
+    color: #000;
 }
